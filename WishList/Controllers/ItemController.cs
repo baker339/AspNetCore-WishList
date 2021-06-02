@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WishList.Data;
-using WishList.Models;
 
 namespace WishList.Controllers
 {
@@ -28,7 +27,7 @@ namespace WishList.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Item item)
+        public IActionResult Create(Models.Item item)
         {
             _context.Items.Add(item);
             _context.SaveChanges();
